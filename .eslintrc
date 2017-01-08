@@ -1,0 +1,23 @@
+{
+    "extends": "airbnb-base",
+    // I want to use babel-eslint for parsing!
+    "parser": "babel-eslint",
+    "env": {
+        // I write for browser
+        "browser": true,
+        // in CommonJS
+        "node": true,
+    },
+    // To give you an idea how to override rule options:
+    "rules": {
+        "semi": [2, "never"],
+        "eol-last": 0,
+        "quotes": [2, "single"],
+        "no-underscore-dangle": [0],
+        "no-param-reassign": 0,
+        "no-shadow": 0,
+        "linebreak-style": 0,
+        "indent": [2, 2, {"SwitchCase": 1}],
+        "consistent-return": 1,
+    }
+}
