@@ -1,11 +1,12 @@
  /* eslint-disable */
 
-import assert from 'assert'
+import { assert } from 'chai'
+import { before, describe, it } from 'mocha'
 import HashTable from '../hashTable/hashTable'
 
-describe('HashTable', function () {
+describe('HashTable', () => {
   let hashTable
-  before(function() {
+  before(() => {
       hashTable = new HashTable
   })
 
@@ -15,14 +16,14 @@ describe('HashTable', function () {
     })
   })
 
-  describe('#put', function() {
+  describe('#put', () => {
     before(() => {
       hashTable.put('name', 'Jason')
     })
     it('put method works', () => {
       assert.equal('Jason', hashTable.get('name'))
     })
-    it('return undefined', () => {
+    it('search unused key should return undefined', () => {
       assert.equal(undefined, hashTable.get('age'))
     })
   })
