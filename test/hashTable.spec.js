@@ -16,14 +16,14 @@ describe('HashTable', () => {
     })
   })
 
-  describe('#put', () => {
+  describe('#get', () => {
     before(() => {
       hashTable.put('name', 'Jason')
     })
-    it('put method works', () => {
+    it('should return expected value', () => {
       assert.equal('Jason', hashTable.get('name'))
     })
-    it('search unused key should return undefined', () => {
+    it('should return undefined when searching unused key ', () => {
       assert.equal(undefined, hashTable.get('age'))
     })
   })
