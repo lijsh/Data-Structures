@@ -27,12 +27,31 @@ describe('Set', () => {
       assert.equal(set.size(), 1)
       assert.isTrue(set.has('first meber'))
     })
-    it('return value should be true and false', () => {
+    it('return value should be true true false', () => {
       const fn = () => { }
       const ret1 = set.add(fn)
       assert.isTrue(ret1)
       const ret2 = set.add(fn)
       assert.isFalse(ret2)
+    })
+  })
+  describe('#remove', () => {
+    it('should works properly', () => {
+      const testArr = ['test']
+      set.add('test member')
+      set.add(testArr)
+      assert.equal(set.size(), 2)
+      assert.isTrue(set.has(testArr))
+      set.remove(testArr)
+      assert.equal(set.size(), 1)
+      assert.isFalse(set.has(testArr))
+    })
+    it('return value should be false or true', () => {
+      assert.isFalse(set.remove('test'))
+      const testArr = ['abc', 'def']
+      set.add(testArr)
+      assert.isTrue(set.remove(testArr))
+      assert.equal(set.size(), 0)
     })
   })
   describe('@_v2s', () => {
