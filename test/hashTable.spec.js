@@ -2,7 +2,7 @@
 
 import { assert } from 'chai'
 import { before, describe, it } from 'mocha'
-import HashTable from '../hashTable/hashTable'
+import HashTable from '../hashTable/'
 
 describe('HashTable', () => {
   let hashTable

@@ -1,6 +1,6 @@
 import { assert } from 'chai'
 import { before, beforeEach, describe, it } from 'mocha'
-import LinkedList from '../linkedList/linkedList'
+import LinkedList from '../linkedList/'
 import Node from '../linkedList/node'
 
 describe('Node', () => {
