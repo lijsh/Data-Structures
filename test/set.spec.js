@@ -4,7 +4,10 @@ import Set from '../Set/index'
 
 describe('Set', () => {
   let set
-  beforeEach(() => { set = new Set() })
+  beforeEach(() => {
+    set = new Set()
+    Set._v2s.next = 0
+  })
   afterEach(() => { set = null })
   it('instance method should exist', () => {
     assert.typeOf(set.add, 'function')
@@ -25,7 +28,7 @@ describe('Set', () => {
       assert.isTrue(set.has('first meber'))
     })
     it('return value should be true and false', () => {
-      const fn = () => {}
+      const fn = () => { }
       const ret1 = set.add(fn)
       assert.isTrue(ret1)
       const ret2 = set.add(fn)
@@ -42,7 +45,6 @@ describe('Set', () => {
       assert.equal(Set._v2s('abcd'), '#abcd')
     })
     it('should works with object type', () => {
-      Set._v2s.next = 0
       const obj1 = { a: 'a' }
       const o2s1 = Set._v2s(obj1)
       assert.equal(o2s1, '$1')

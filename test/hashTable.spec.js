@@ -1,5 +1,3 @@
- /* eslint-disable */
-
 import { assert } from 'chai'
 import { before, describe, it } from 'mocha'
 import HashTable from '../hashTable/'
@@ -7,7 +5,7 @@ import HashTable from '../hashTable/'
 describe('HashTable', () => {
   let hashTable
   before(() => {
-      hashTable = new HashTable
+    hashTable = new HashTable()
   })
 
   describe('#constructor', () => {
