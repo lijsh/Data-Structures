@@ -1,6 +1,6 @@
 import { assert } from 'chai'
 import { beforeEach, afterEach, describe, it } from 'mocha'
-import Set from '../Set/index'
+import Set from '../Set/'
 
 describe('Set', () => {
   let set
@@ -9,7 +9,7 @@ describe('Set', () => {
     Set._v2s.next = 0
   })
   afterEach(() => { set = null })
-  it('instance method should exist', () => {
+  it('instance methods should exist', () => {
     assert.typeOf(set.add, 'function')
     assert.typeOf(set.remove, 'function')
     assert.typeOf(set.has, 'function')
